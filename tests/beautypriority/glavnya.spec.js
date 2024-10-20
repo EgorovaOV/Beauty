@@ -15,14 +15,53 @@ test ('загружается главная страница', async ({ page })
     const sliderMainPage = await page.$('.t-slds__items-wrapper.t-slds_animated-none');
     expect (sliderMainPage).toBeTruthy();
 
-    const selectorForEvents = '.r.t-rec.t-rec_pt_0.t-rec_pb_15 #rec578985895';
-    const events = await page.$('.data-tile-ratio');
+    const selectorForEvents = '#rec578985895';
+    const events = await page.$(selectorForEvents);
     expect (events).toBeTruthy()
 
-    const actions = await page.$('t478__sizer t-col t-col_7');
+    const selectorForActions = '#rec570710170';
+    const actions = await page.$(selectorForActions);
     expect (actions).toBeTruthy()
 
 
+    const selectorForOurServices = '.t-section__title.t-title.t-title_xs.t-align_left ';
+    const ourServices = await page.$(selectorForOurServices);
+    expect (ourServices).toBeTruthy()
+
+    const selectorForOurTeam = '#rec247122420';
+    const ourTeam = await page.$(selectorForOurTeam);
+    expect (ourTeam).toBeTruthy()
+
+    const selectorForTeamFoto = '.t603';
+    const TeamFoto = await page.$(selectorForTeamFoto)
+    expect (TeamFoto).toBeTruthy()
+
+    const selectorForWorksFoto = '#rec365143582';
+    const WorksFoto = await page.$(selectorForWorksFoto)
+    expect (WorksFoto).toBeTruthy()
+
+    const selectorAboutUs = '#rec247126236';
+    const AboutUs = await page.$(selectorAboutUs)
+    expect (AboutUs).toBeTruthy();
+
+    const selectorForYourQuestion = '#rec162574512'
+    const YourQuestion = await page.$(selectorForYourQuestion)
+    expect (YourQuestion).toBeTruthy()
+
+    const selectorForClientsFeedback = '#rec121302375'
+    const ClientsFeedback = await page.$(selectorForClientsFeedback)
+    expect (ClientsFeedback).toBeTruthy()
+
+    const selectorForFooter = '#t-footer'
+    const Footer = await page.$(selectorForFooter)
+    expect (Footer).toBeTruthy()
+
+    const selectorbuttonForOnline = 'body > a.yButton.bottom.right > div.yButtonWave'
+    const buttonForOnline = await page.$(selectorbuttonForOnline)
+    expect (buttonForOnline).toBeTruthy()
+
+
+    
     });
 
 
