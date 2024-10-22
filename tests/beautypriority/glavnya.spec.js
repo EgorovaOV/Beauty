@@ -12,7 +12,8 @@ test ('загружается главная страница', async ({ page })
     await page.goto(url);
     //ожидаем, что есть класс в имени которого есть части .t-slds__items-wrapper и .t-slds_animated-none
     //в названии класса они написаны без точек
-    const sliderMainPage = await page.$('.t-slds__items-wrapper.t-slds_animated-none');
+    const selectorForSliderMainPage = '.t-slds__items-wrapper.t-slds_animated-none'
+    const sliderMainPage = await page.$(selectorForSliderMainPage);
     expect (sliderMainPage).toBeTruthy();
 
     const selectorForEvents = '#rec578985895';
