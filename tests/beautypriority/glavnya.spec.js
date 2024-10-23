@@ -5,6 +5,8 @@ const { test, expect } = require('@playwright/test');
 const { beforeEach } = require('node:test');
 const url = 'https://beauty-priority.ru/';
 
+
+
 //beforeEach(async ({page}) =>{
  //   await page.goto(url);
 //})
@@ -64,6 +66,17 @@ test ('загружается главная страница', async ({ page })
 
     
     });
+
+
+
+
+    test ('Проверяем наличие и доступность блоков сайта', async ({page}) =>{
+        await page.goto(url);
+
+
+
+
+    })
 
 
 
