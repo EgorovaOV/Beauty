@@ -1,0 +1,4 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","30037","Проверяем наличие и доступность блоков сайта","firefox","Fri Oct 25 21:47:57 YEKT 2024","broken","Fri Oct 25 21:48:27 YEKT 2024","","beautypriority\glavnya1.spec.js","",""
+"","30025","Проверяем наличие и доступность блоков сайта","webkit","Fri Oct 25 21:47:57 YEKT 2024","broken","Fri Oct 25 21:48:27 YEKT 2024","","beautypriority\glavnya1.spec.js","",""
+"","5935","Проверяем наличие и доступность блоков сайта","chromium","Fri Oct 25 21:47:57 YEKT 2024","passed","Fri Oct 25 21:48:03 YEKT 2024","","beautypriority\glavnya1.spec.js","",""
