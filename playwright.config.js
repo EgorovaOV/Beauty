@@ -1,6 +1,8 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
-const { AllureReporter } = require('allure-playwright');
+const AllureReporter = require('allure-playwright');
+//const AllureReporter = require('allure-playwright').AllureReporter; // Измените импорт, чтобы получить класс
+
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -24,8 +26,9 @@ module.exports = defineConfig({
   reporter: [
     ['html'], // HTML репортер
     ['list'], // Вывод в терминал
-    [AllureReporter, { outputFolder: 'allure-results' }], // Добавление Allure Reporter с указанием папки вывода
-  
+    //[new AllureReporter({ outputFolder: 'allure-results' })] allure-playwright
+    //[AllureReporter, { outputFolder: 'allure-results' }], // Добавление Allure Reporter с указанием папки вывода
+    ['allure-playwright', { outputFolder: 'allure-results' }],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {

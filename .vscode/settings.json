@@ -36,5 +36,8 @@
     "**/test": true,
     "**/spec": true
 },
-"search.followSymlinks": false
+"search.followSymlinks": false,
+"playwright.env": {
+    
+}
 }
