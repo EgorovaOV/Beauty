@@ -1,6 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
-
+const { AllureReporter } = require('allure-playwright');
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -21,13 +21,19 @@ module.exports = defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
-  reporter: 'html',
+  reporter: [
+    ['html'], // HTML репортер
+    ['list'], // Вывод в терминал
+    [AllureReporter, { outputFolder: 'allure-results' }], // Добавление Allure Reporter с указанием папки вывода
+  
+  ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
+     // ваши настройки для браузеров, например, headless: true
     trace: 'on-first-retry',
   },
 
@@ -75,5 +81,9 @@ module.exports = defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
+  
 });
 
+
+
+    
